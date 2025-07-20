@@ -6,9 +6,7 @@ class HomeController extends Controller
 
      public function index()
      {
-        echo "This is home controller";
+        
+         $this->view('home');
      }
 } 
-
- $home = new HomeController;
- $home->index();
