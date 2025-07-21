@@ -28,6 +28,25 @@ Trait Database
         return false;
 
     }
+
+    public function get_row($query, $data = [])
+    {
+        $con = $this->connect();
+        $statement = $con->prepare($query);
+
+        $check = $statement->execute($data);
+        if($check)
+        {
+            $result = $statement->fetchALL(PDO::FETCH_OBJ);
+            if(is_array($result) && count($result))
+            {
+               return $result[0];
+            };
+        }
+
+        return false;
+
+    }
     
 
 }
