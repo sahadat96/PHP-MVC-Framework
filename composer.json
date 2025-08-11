@@ -1,0 +1,15 @@
+{
+    "name": "sahadat/php-mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
+    "authors": [
+        {
+            "name": "sahadat96",
+            "email": "sahadatappdev@gmail.com"
+        }
+    ],
+    "require": {}
+}
